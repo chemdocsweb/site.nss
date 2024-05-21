@@ -35,14 +35,14 @@ body {
 }
 .home_heading_p h1 {
   font-size: 1.15rem;
-  text-wrap: wrap;
+  word-wrap: wrap;
   text-align: center;
   margin: 1rem .5rem 0 .5rem;
 }
 .home_heading_p p {
   display: inline-block;
   font-size: .75rem;
-  text-wrap: wrap;
+  word-wrap: wrap;
   text-align: center;
 }
 #hamburger {
@@ -101,14 +101,14 @@ body {
 }
 .home_heading_l h1 {
   font-size: 1.35rem;
-  text-wrap: wrap;
+  word-wrap: wrap;
   text-align: center;
   margin: 2rem 0 0 0;
 }
 .home_heading_l p {
   display: inline-block;
   font-size: .85rem;
-  text-wrap: wrap;
+  word-wrap: wrap;
   text-align: center;
 }
 
@@ -228,6 +228,21 @@ body {
 .social a {
   color: #0E3570;
   margin: .25rem;
+}
+
+@media only screen and (orientation: landscape) {
+  #home_portrait {
+    display: none;
+  }
+  #home_landscape {
+    display: block;
+  }
+  .home_heading_l h1 {
+    font-size: 1rem;
+  }
+  .home_heading_l p {
+    font-size: .75rem;
+  }
 }
 
 @media only screen and (min-width:380px){
