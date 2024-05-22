@@ -1,6 +1,7 @@
 function back(){
   window.history.back();
 }
+
 function hamburger_click(){
   var home_links = document.getElementById("home_links_p");
   var line1 = document.getElementsByClassName("line1")[0];
@@ -38,6 +39,31 @@ function hamburger_click(){
     line3.style.transform = 'rotate(45deg) translateX(.05rem) translateY(-.82rem)';
   }
 }
+var slideIndex = 1
+showSlide(slideIndex)
+function prev_photo(n) {
+  slideIndex = slideIndex - n
+  showSlide(slideIndex)
+}
+function next_photo(n) {
+  slideIndex = slideIndex + n
+  showSlide(slideIndex)
+}
+function showSlide(index) {
+  let i = 0;
+  var slides_div = document.querySelector(".home_photos")
+  var no_of_slides = slides_div.children.length
+  //console.log(no_of_slides)
+  if (index<1) {
+    //index = no_of_slides
+    slideIndex = no_of_slides
+  } else if (index>no_of_slides) {
+    //index = 1
+    slideIndex = 1
+  }
+  console.log(slideIndex)
+}
+
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 var screenAspect_ratio = screenHeight/screenWidth

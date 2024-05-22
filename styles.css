@@ -147,6 +147,23 @@ body {
   padding: 1.4rem 1rem 1.4rem 1rem;
   text-decoration: none;
 }
+.home_gallery {
+  display: flex;
+  width: 100%;
+}
+.home_gallery button{
+  z-index: 10;
+}
+.home_photos img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.home_photos img:nth-child(1){
+  display: block;
+}
+
+
 
 
 /* Unit 2 page styles*/
