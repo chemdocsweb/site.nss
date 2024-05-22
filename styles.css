@@ -247,7 +247,7 @@ body {
   margin: .25rem;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (max-height: 480px) and (orientation: landscape) {
   #home_portrait {
     display: none;
   }
@@ -260,7 +260,15 @@ body {
   .home_heading_l p {
     font-size: .75rem;
   }
+  #home_nav_landscape p {
+    font-size: 1rem;
+  }
+  #home_links_l a {
+    font-size: .85rem;
+    padding: 1.25rem .85rem 1.25rem .85rem;
+  }
 }
+
 
 @media only screen and (min-width:480px){
   body{
