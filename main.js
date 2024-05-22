@@ -39,30 +39,35 @@ function hamburger_click(){
     line3.style.transform = 'rotate(45deg) translateX(.05rem) translateY(-.82rem)';
   }
 }
-var slideIndex = 1
-showSlide(slideIndex)
+// Gallary Slideshow
+var slideNo = 1;
+showSlide(slideNo);
+function wrap_around(index) {
+  var slides_div = document.querySelector(".home_photos");
+  var no_of_slides = slides_div.children.length;
+  if (index<1) {
+    index = no_of_slides;
+  } else if (index>no_of_slides) {
+    index = 1;
+  }
+  return index
+}
 function prev_photo(n) {
-  slideIndex = slideIndex - n
-  showSlide(slideIndex)
+  slideNo = wrap_around(slideNo - n);
+  showSlide(slideNo);
 }
 function next_photo(n) {
-  slideIndex = slideIndex + n
-  showSlide(slideIndex)
+  slideNo = wrap_around(slideNo + n);
+  showSlide(slideNo);
 }
-function showSlide(index) {
-  let i = 0;
-  var slides_div = document.querySelector(".home_photos")
-  var no_of_slides = slides_div.children.length
-  //console.log(no_of_slides)
-  if (index<1) {
-    //index = no_of_slides
-    slideIndex = no_of_slides
-  } else if (index>no_of_slides) {
-    //index = 1
-    slideIndex = 1
-  }
-  console.log(slideIndex)
+function showSlide(slideIndex) {
+  var ind = slideIndex - 1;
+  var slides = document.querySelectorAll(".home_photos img");
+  slides.forEach(slide => {slide.classList.remove("active");
+  });
+  slides[ind].classList.add("active");
 }
+
 
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;

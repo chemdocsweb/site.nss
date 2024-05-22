@@ -159,7 +159,7 @@ body {
   height: auto;
   display: none;
 }
-.home_photos img:nth-child(1){
+.home_photos img.active {
   display: block;
 }
 
@@ -280,5 +280,12 @@ body {
   }
   #home_landscape {
     display: block;
+  }
+  .home_gallery {
+    align-items: center;
+  }
+  .gallery_button {
+    width: 10vw;
+    height: 20vh;
   }
 }
