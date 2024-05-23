@@ -22,7 +22,7 @@ body {
   display: flex;
   margin: 10px 5px 10px 5px;
   color: white;
-  background-color: #3A3C71;
+  background-color: #163976;
   padding: .2rem 1rem .2rem 1rem;
   border-radius: 2rem;
   align-items: center;
@@ -74,7 +74,7 @@ body {
   display: block;
   color: white;
   font-size: 1rem;
-  background-color: #3A3C71;
+  background-color: #163976;
   padding: .5rem .5rem .5rem .5rem;
   text-decoration: none;
 }
@@ -125,7 +125,7 @@ body {
   display: flex;
   margin: 10px 10px 10px 5px;
   color: white;
-  background-color: #3A3C71;
+  background-color: #163976;
   padding: .25rem 1rem .25rem 1rem;
   border-radius: 2rem;
   align-items: center;
@@ -143,7 +143,7 @@ body {
 #home_links_l a {
   font-size: 1rem;
   color: white;
-  background-color: #3A3C71;
+  background-color: #163976;
   padding: 1.4rem 1rem 1.4rem 1rem;
   text-decoration: none;
 }
@@ -163,8 +163,57 @@ body {
   display: block;
 }
 
-
-
+/* team.html styles
+red color: #D12E2D;
+cyan color: #A2E6FC;
+blue color: #163976;*/
+#team_page_header {
+  display: flex;
+  background-color: #163976;
+  justify-content: space-around;
+  width: 100vw;
+  height: 12vh;
+}
+.team_title {
+  background-color: #D12E2D;
+  color: white;
+  border-radius: 50%;
+  transform: translateY(-70%);
+  width: 45vw;
+  height: 50vw;
+  z-index: 10;
+}
+.team_title h1 {
+  font-size: 1.15rem;
+  color: blue;
+  border: 2px solid black;
+  transform: translateY(0);
+  z-index: 100;
+}
+.team_links {
+  display: block;
+  margin: 0;
+  margin-left: 1.5rem;
+  text-align: right;
+  align-self: center; 
+}
+.team_links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: .5rem;
+}
+.back_button_cyan {
+  font-size: 1.5rem;
+  width: 2.5rem;
+  height: auto;
+  color: #A2E6FC;
+  text-decoration: none;
+  margin: 0;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  padding: 0;
+}
 
 /* Unit 2 page styles*/
 #background {
@@ -184,11 +233,15 @@ body {
   margin-bottom: 5rem;
   z-index: 15;
 }
-.back_button {
+.back_button_blue {
   font-size: 1.5rem;
   width: 2.5rem;
-  color: #3A3C71;
+  color: #163976;
   text-decoration: none;
+  margin: 0;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  padding: 0;
 }
 .heading{
   text-align: center;
@@ -295,5 +348,8 @@ body {
   .gallery_button {
     width: 10vw;
     height: 20vh;
+  }
+  #team_page_header {
+    justify-content: space-between;
   }
 }
