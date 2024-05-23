@@ -204,15 +204,10 @@ blue color: #163976;*/
   margin: .5rem;
 }
 .back_button_cyan {
-  font-size: 1.5rem;
-  width: 2.5rem;
+  font-size: 1.75rem;
   height: auto;
   color: #A2E6FC;
   text-decoration: none;
-  margin: 0;
-  margin-top: .5rem;
-  margin-left: .5rem;
-  padding: 0;
 }
 
 /* Unit 2 page styles*/
@@ -233,15 +228,14 @@ blue color: #163976;*/
   margin-bottom: 5rem;
   z-index: 15;
 }
-.back_button_blue {
-  font-size: 1.5rem;
-  width: 2.5rem;
-  color: #163976;
-  text-decoration: none;
-  margin: 0;
+.back_button_div {
   margin-top: .5rem;
   margin-left: .5rem;
-  padding: 0;
+}
+.back_button_blue {
+  font-size: 1.75rem;
+  color: #163976;
+  text-decoration: none;
 }
 .heading{
   text-align: center;
