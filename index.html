@@ -12,26 +12,26 @@
 </head>
 
 <body>
-  <header id="home_portrait">
-    <div id="home_images_p">
+  <header class="home_mobile">
+    <div class="home_images_m">
       <img src="images/logos/GVP_logo.png">
       <img src="images/logos/25Years_logo.png">
       <img src="images/logos/NSS_logo.png">
       <img src="images/logos/CFSR_logo.jpg">
     </div>
-    <div class="home_heading_p">
+    <div class="home_heading_m">
       <h1>
         GAYATRI VIDYA PARISHAD COLLEGE OF ENGINEERING(A)</h1>
       <p>Approved by AICTE, New Delhi and Affiliated to Andhra University, Madhurawada, Visakhapatnam - 530048</p>
     </div>
-    <nav id="home_nav_portrait">
+    <nav class="home_nav_mobile">
       <p>NSS<br>GVPCE(A)</p>
       <div id="hamburger" onclick="hamburger_click()">
-        <span class="line1"></span>
-        <span class="line2"></span>
-        <span class="line3"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
       </div>
-      <div id="home_links_p">
+      <div class="home_links_m">
         <a href="index.html"><i class="fa fa-home"></i>&nbsp;Home</a>
         <a href="aboutus.html"><i class="fa fa-user"></i>&nbsp;About Us</a>
         <a href="gallery.html"><i class="fa fa-photo"></i>&nbsp;Gallery</a>
@@ -41,25 +41,25 @@
       </div>
     </nav>
   </header>
-  <header id="home_landscape">
-    <div class="home_landscape_head">
-      <div id="home_images_l_1">
+  <header class="home_desktop">
+    <div class="home_desktop_head">
+      <div class="home_images_d_1">
         <img src="images/logos/GVP_logo.png">
         <img src="images/logos/25Years_logo.png">
       </div>
-      <div class="home_heading_l">
+      <div class="home_heading_d">
         <h1>
         GAYATRI VIDYA PARISHAD COLLEGE OF ENGINEERING(A)</h1>
         <p>Approved by AICTE, New Delhi and Affiliated to Andhra University, Madhurawada, Visakhapatnam - 530048</p>
       </div>
-      <div id="home_images_l_2">
+      <div class="home_images_d_2">
         <img src="images/logos/NSS_logo.png">
         <img src="images/logos/CFSR_logo.jpg">
       </div>
     </div>
-    <nav id="home_nav_landscape">
+    <nav class="home_nav_desktop">
       <p>NSS<br>GVPCE(A)</p>
-      <div id="home_links_l">
+      <div class="home_links_d">
         <a href="index.html">Home</a>
         <a href="aboutus.html">About Us</a>
         <a href="gallery.html">Gallery</a>
@@ -71,7 +71,7 @@
   </header>
   <main class="home_main">
     <section class="home_gallery">
-      <button onclick="prev_photo(1)" class="gallery_button"><i class="fa fa-chevron-left"></i></button>
+      <button onclick="prev_photo(1)" class="home_gallery_button"><i class="fa fa-chevron-left"></i></button>
       <div class="home_photos">
         <img src="images/any_photo1.jpg" class="active">
         <img src="images/any_photo2.jpg">
@@ -80,7 +80,7 @@
         <img src="images/any_photo5.jpg">
         <img src="images/any_photo6.jpg">
       </div>
-      <button onclick="next_photo(1)" class="gallery_button"><i class="fa fa-chevron-right"></i></button>
+      <button onclick="next_photo(1)" class="home_gallery_button"><i class="fa fa-chevron-right"></i></button>
     </section>
   </main>
 </body>

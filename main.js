@@ -3,10 +3,10 @@ function back(){
 }
 
 function hamburger_click(){
-  var home_links = document.getElementById("home_links_p");
-  var line1 = document.getElementsByClassName("line1")[0];
-  var line2 = document.getElementsByClassName("line2")[0];
-  var line3 = document.getElementsByClassName("line3")[0];
+  var home_links = document.getElementsByClassName("home_links_m")[0];
+  var line1 = document.getElementsByClassName("line")[0];
+  var line2 = document.getElementsByClassName("line")[1];
+  var line3 = document.getElementsByClassName("line")[2];
     
   if (home_links.style.display === 'block') {
     home_links.style.display = 'none';
@@ -21,7 +21,7 @@ function hamburger_click(){
   } else {
     var screenWidth = window.innerWidth;
     var screenHeight = window.innerHeight;
-    var navbar = document.getElementById("home_nav_portrait");
+    var navbar = document.getElementsByClassName("home_nav_mobile")[0];
     var hamburger = document.getElementById("hamburger");
     
     var hamburger_start_x = hamburger.offsetLeft;
