@@ -156,16 +156,38 @@ body {
 }
 .home_gallery_button{
   position: absolute;
-  color: ;
   z-index: 10;
   outline: none;
   border: none;
   background-color: rgba(162, 230, 252, 0.5);
+  padding: .45rem;
+  border-radius: 50%;
+}
+.home_gallery_button:hover{
+  background-color: rgba(162, 230, 252, 0.7);
+  padding: .6rem;
+  transition: ease-in-out;
+  transition-duration: .25s;
+}
+.home_gallery_button i{
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+.home_gallery_button i:hover {
+  font-size: 1.25rem;
+}
+.home_gallery_button.left {
+  left: 1vw;
+}
+.home_gallery_button.right {
+  right: 2vw;
 }
 .home_photos {
   display: flex;
   overflow: hidden;
   position: relative;
+  justify-content: center;
+  text-align: center;
   width: 100%;
 }
 .home_photos img {
