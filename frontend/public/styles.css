@@ -199,6 +199,94 @@ body {
   display: block;
 }
 
+
+
+
+
+/* events.html Styles*/
+.events_header {
+  display: flex;
+  position: relative;
+  background-color: #163976;
+  width: 100vw;
+  height: 5rem;
+  box-sizing: border-box;
+}
+.events_head {
+  color: white;
+  font-size: 1.2rem;
+  margin: 1rem;
+  position: relative;
+  top: 1.5rem;
+}
+.events_title {
+  background-color: #D12E2D;
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  top: -2.5rem;
+  right: 1rem;
+}
+.events_title h2 { 
+  color: white;
+  position: relative;
+  top: 1rem;
+}
+.events_main {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+}
+.events_list {
+  display: grid;
+  width: 65%;
+  padding: 1rem;
+  border: 2px solid blueviolet;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.event_card {
+  display: block;
+  width: 50vw;
+  background-color: #163976;
+  box-sizing: border-box;
+  border-radius: 4.5vw;
+  margin: 5vw;
+  align-content: center;
+}
+.event_card img {
+  margin: 1.5vw;
+  width: 47vw;
+  border-radius: 3vw;
+  margin-bottom: 0;
+}
+.event_card h3 {
+  color: white;
+  text-align: center;
+  border: 3px solid ghostwhite;
+}
+.event_card a {
+  color: white;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid ghostwhite;
+}
+.future_events {
+  width: 35%;
+  padding: .25rem;
+  border: 2px solid indianred;
+  box-sizing: border-box;
+}
+.future_events h3 {
+  color: #163976;
+}
+.future_event h4, .future_event p {
+  word-wrap: wrap;
+}
+
+
 /* team.html styles
 red color: #D12E2D;
 cyan color: #A2E6FC;
@@ -210,10 +298,11 @@ blue color: #163976;*/
   width: 100vw;
   height: 5rem;
 }
-.back_button_cyan {
+.back_button.cyan {
   font-size: 1.75rem;
   color: #A2E6FC;
   text-decoration: none;
+  cursor: pointer;
 }
 .team_title {
   background-color: #D12E2D;
