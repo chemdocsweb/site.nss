@@ -206,11 +206,17 @@ body {
 /* events.html Styles*/
 .events_header {
   display: flex;
-  position: relative;
+  position: fixed;
   background-color: #163976;
   width: 100vw;
   height: 5rem;
   box-sizing: border-box;
+  z-index: 10;
+}
+.events_main {
+  top: 5rem;
+  position: absolute;
+  z-index: 5;
 }
 .events_head {
   color: white;
@@ -240,9 +246,9 @@ body {
 }
 .events_list {
   display: grid;
+  background-color: #A2E6FC;
   width: 65%;
   padding: 1rem;
-  border: 2px solid blueviolet;
   justify-content: center;
   box-sizing: border-box;
 }
@@ -253,38 +259,48 @@ body {
   box-sizing: border-box;
   border-radius: 4.5vw;
   margin: 5vw;
-  align-content: center;
+  text-align: center;
+}
+.event_card img,
+.event_card p, 
+.event_card a {
+  margin: 1.5vw;
 }
 .event_card img {
-  margin: 1.5vw;
   width: 47vw;
   border-radius: 3vw;
-  margin-bottom: 0;
+  margin-bottom: 0rem;
 }
-.event_card h3 {
+.event_card p {
   color: white;
   text-align: center;
-  border: 3px solid ghostwhite;
 }
 .event_card a {
-  color: white;
-  width: 100%;
+  display: inline-block;
+  color: #163976;
+  background-color: #A2E6FC;
+  padding: .25rem 1rem;
+  border-radius: 2rem;
   text-align: center;
   text-decoration: none;
-  border: 3px solid ghostwhite;
+  margin-bottom: 3vw;
 }
 .future_events {
+  position: fixed;
   width: 35%;
-  padding: .25rem;
-  border: 2px solid indianred;
+  padding: .5rem;
+  right: 0;
   box-sizing: border-box;
 }
 .future_events h3 {
   color: #163976;
 }
-.future_event h4, .future_event p {
+.future_events h4, .future_events p {
   word-wrap: wrap;
 }
+
+
+
 
 
 /* team.html styles
@@ -441,6 +457,9 @@ blue color: #163976;*/
     font-size: .85rem;
     padding: 1.25rem .85rem 1.25rem .85rem;
   }
+  .events_title {
+    right: 5rem;
+  }
 }
 
 
@@ -462,11 +481,54 @@ blue color: #163976;*/
     width: 10vw;
     height: 20vh;
   }
-  .back_button {
+  .back_button, .back_button.cyan {
     font-size: 3rem;
     width: 4rem;
   }
-  .cards{
+  
+  
+  
+  /* events.html styles */
+  .events_header {
+    height: 6rem;
+  }
+  .events_head {
+    left: 4rem;
+    top: 2.25rem;
+    font-size: 1.25rem;
+  }
+  .events_title {
+    padding: 3.25rem 3.5rem;
+    right: 10rem;
+    top: -7.5rem;
+  }
+  .events_title h2 {
+    font-size: 2rem;
+    top: 3.5rem;
+    font-weight: bold;
+  }
+  .events_list {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    width: 70%;
+  }
+  .event_card {
+    width: 20vw;
+    margin: 1rem .5rem;
+    border-radius: 1.5vw;
+  }
+  .event_card img {
+    width: 18vw;
+    margin: .75vw .5vw;
+    border-radius: 1vw;
+  }
+  .future_events {
+    position: absolute;
+    right: 0;
+    width: 30%;
+  }
+  
+  
+  .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   gap: 15px;

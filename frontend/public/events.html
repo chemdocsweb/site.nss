@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 
-  <title></title>
+  <title>Events</title>
 </head>
 
 <body>
@@ -29,23 +29,23 @@
       { % for event in events % }
       <div class="event_card">
         <img src="{{ events['img_src']}}">
-        <h3>{{ events['event'] }}</h3>
+        <p>{{ events['event'] }}</p>
         <a href="{{ events['link'] }}"> Know</a>
       </div>
       { % endfor % }--->
       <div class="event_card">
         <img src="images/other/event_img.jpg">
-        <h3>Event</h3>
+        <p>Event</p>
         <a href="{{ events['link'] }}"> Know</a>
       </div>
       <div class="event_card">
         <img src="images/other/event_img.jpg">
-        <h3>Event</h3>
+        <p>Event</p>
         <a href="{{ events['link'] }}"> Know</a>
       </div>
       <div class="event_card">
         <img src="images/other/event_img.jpg">
-        <h3>Event</h3>
+        <p>Event</p>
         <a href="{{ events['link'] }}"> Know</a>
       </div>
       
@@ -64,5 +64,5 @@
   </main>
 
 </body>
-
+<script type="text/javascript" src="main.js"></script>
 </html>
