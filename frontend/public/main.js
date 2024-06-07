@@ -96,6 +96,4 @@ if (window.location.href.includes("index.html")) {
   img.style.height = `${new_height}px`
   img.style.width = `${new_width}px`
   img.style.margin = `${top_bottom_margin}px ${left_right_margin}px ${top_bottom_margin}px ${left_right_margin}px`;
-} else {
-  
 }
