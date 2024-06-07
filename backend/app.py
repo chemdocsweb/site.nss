@@ -8,7 +8,7 @@ template_path = "../frontend/public"
 app = Flask(__name__, template_folder = template_path)
 
 @app.route('/')
-def events():
+def show_events():
 	return render_template("events.html", events=events, next_events=next_events)
 
 if __name__ == "__main__":
