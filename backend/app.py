@@ -12,4 +12,4 @@ def show_events():
 	return render_template("events.html", events=events, next_events=next_events)
 
 if __name__ == "__main__":
-	app.run(debug=os.getenv('FLASK_ENV') == 'development')
+	app.run(host= '0.0.0.0', port=5000, debug=os.getenv('FLASK_ENV') == 'development')
