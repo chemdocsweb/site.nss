@@ -11,4 +11,4 @@ def events():
 	return render_template("events.html", events=events, next_events=next_events)
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run(debug=os.getenv('FLASK_ENV') == 'development')
