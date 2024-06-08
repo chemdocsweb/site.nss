@@ -14,4 +14,5 @@ def show_events():
 	return render_template("events.html", events=events, next_events=next_events)
 
 if __name__ == "__main__":
-	app.run(debug=os.getenv('FLASK_ENV') == 'development')
+  port = int(os.environ.get('PORT', 5000))  # Use the PORT environment variable or default to 5000
+  app.run(host='0.0.0.0', port=port, debug=True)
