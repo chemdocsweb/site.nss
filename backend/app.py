@@ -8,8 +8,8 @@ template_path = "../frontend/public"
 app = Flask(__name__, template_folder = template_path)
 @app.route('/')
 def index():
-	return send_from_directory('frontend/public', 'index.html')
-@app.route('/events')
+	return send_from_directory('../frontend/public', 'index.html')
+@app.route('/events.html')
 def show_events():
 	return render_template("events.html", events=events, next_events=next_events)
 
