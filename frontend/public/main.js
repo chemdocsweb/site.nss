@@ -41,7 +41,6 @@ function hamburger_click(){
 }
 // Gallary Slideshow
 var slideNo = 1;
-showSlide(slideNo);
 function wrap_around(index) {
   var slides_div = document.querySelector(".home_photos");
   var no_of_slides = slides_div.children.length;
@@ -50,7 +49,7 @@ function wrap_around(index) {
   } else if (index>no_of_slides) {
     index = 1;
   }
-  return index
+  return index;
 }
 function prev_photo(n) {
   slideNo = wrap_around(slideNo - n);
@@ -74,6 +73,7 @@ var screenHeight = window.innerHeight;
 var screenAspect_ratio = screenHeight/screenWidth
 
 if (window.location.href.includes("index.html")) {
+  showSlide(slideNo);
   
 } else if (window.location.href.includes('unit_1_leads.html') || window.location.href.includes('unit_2_leads.html')) {
   
