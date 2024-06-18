@@ -338,10 +338,11 @@ blue color: #163976;*/
   top: 3rem;
 }
 .team_links {
+  box-sizing: border-box;
   display: block;
   margin: 0;
   text-align: right;
-  align-self: center; 
+  align-self: center;
 }
 .team_links a {
   display: block;
@@ -455,6 +456,139 @@ blue color: #163976;*/
   margin: 0 2rem;
   color: white;
 }
+
+
+
+/* Unit 1 Page Styles */
+#unit_page_header {
+  display: flex;
+  background-color: #163976;
+  width: 100vw;
+  height: 5rem;
+}
+.unit_title {
+  background-color: #D12E2D;
+  position: absolute;
+  margin-left: 5rem;
+  border-radius: 50%;
+  width: 11rem;
+  height: 7rem;
+  align-items: center;
+  top: -3.5rem;/*
+  right: -3rem;*/
+}
+.unit_title h1 {
+  position: relative;
+  font-size: 1.25rem;
+  color: white;
+  text-align: center;
+  top: 3rem;
+}
+.unit_nss_title {
+  height: inherit;
+  width: 100%;
+  display: block;
+  text-align: right;
+  align-content: flex-end;/*
+  border: 2px solid white;*/
+}
+.unit_nss_title h3 {
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: white;
+}
+.unit_main {
+  display: flex;
+  box-sizing: border-box;
+}
+.unit_lead_mem {
+  text-align: center;
+  width: 60vw;
+}
+.unit_core_mem {
+  background-color: #A2E6FC;
+  width: 40vw;
+}
+.unit_lead_cards {
+  display: block;
+  margin: 1rem 1rem;
+}
+.unit_lead_card {
+  display: block;
+  margin-bottom: 1rem;
+}
+.unit_lead_card img {
+  width: 9rem;
+  border-radius: 50%;
+}
+.unit_lead_details {
+  background-color: #A2E6FC;
+  border-radius: 1.5rem;
+  padding: .5rem;
+  padding-top: 5rem;
+  margin-top: -4.5rem;
+}
+.unit_lead_details h3 {
+  color: #0E3570;
+  font-size: 1rem;
+  margin: 0;
+}
+.unit_lead_details h4,
+.unit_lead_details h5 {
+  margin: .25rem;
+  color: black;
+  font-size: .65rem;
+}
+.unit_lead_links {
+  margin: .25rem;
+}
+.unit_lead_links a i {
+  font-size: 1.25rem;
+  color: #0E3570;
+  margin: 0 .125rem;
+  height: 1rem;
+}
+.unit_lead_link {
+  margin: 1rem;
+  text-align: right;
+}
+.unit_lead_link a {
+  color: white;
+  background-color: #0E3570;
+  border-radius: 2rem;
+  text-decoration: none;
+  padding: .5rem;
+}
+.unit_core_mem {
+  padding: .25rem;
+}
+.unit_core_mem h3 {
+  margin: 1rem .5rem;
+  font-size: 1.125rem;
+  text-align: center;
+  font-weight: bold;
+}
+.unit_core_mem h4 {
+  margin: .75rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.unit_core_mem h5 {
+  margin: .75rem;
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
 
 
 
