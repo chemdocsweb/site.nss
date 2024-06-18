@@ -582,101 +582,80 @@ blue color: #163976;*/
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Unit 2 page styles*/
 #background {
   position: fixed;
-  width: auto;
-  height: auto;
-  opacity: 0.1;
+  z-index: -10;
+  opacity: .2;
 }
-
-.unit2_leads {
+.back_button.blue {
+  top: .5rem;
+  left: .5rem;
+  position: absolute;
+  font-size: 1.75rem;
+  color: #0E3570;
+  text-decoration: none;
+  cursor: pointer;
+}
+.unit_mem_heading {
+  text-align: center;
+  margin: 0;
+}
+.unit_mem_heading p {
+  font-size: 1.5rem;
+  display: inline-block;
+  background-color: #0E3570;
+  color: white;
+  padding: .5rem 2rem;
+  border-radius: 2rem;
+}
+.unit_mem_cards {
   display: block;
-  background-color: #EBF1F8;
+  text-align: center;
+  margin: .5rem 0;
+}
+.unit_mem_card {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.unit_mem_photo {
   z-index: 10;
 }
-.unit2_sections{
-  position: relative;
-  margin-bottom: 5rem;
-  z-index: 15;
-}
-.back_button_div {
-  margin-top: .5rem;
-  margin-left: .5rem;
-}
-.back_button_blue {
-  font-size: 1.75rem;
-  color: #163976;
-  text-decoration: none;
-}
-.heading{
-  text-align: center;
-}
-.heading p {
-  display: inline-block;
-  color: white;
-  background-color: #0E3570;
-  text-align: center;
-  align-content: center;
-  font-size: 1.75rem;
-  border-radius: 2rem;
-  height: 3rem;
-  width: auto;
-  margin: 1rem 1rem 1rem 1rem;
-  padding: 1rem;
-}
-.cards{
-  /*border: 2px solid #0E3570;*/
-  margin-top: 3rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.card {
-  /*border: 2px solid red;*/
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.photo {
-  position: relative;
-  z-index: auto;
-}
-.photo img {
-  border: 2px solid #0E3570;
+.unit_mem_photo img {
+  width: 6.75rem;
+  height: auto;
   border-radius: 50%;
 }
-.details {
-  height: 7rem;
-  min-width: 14rem;
-  width: 77%;
-  color: white;
+.mem_details {
+  z-index: -2;
   background-color: #A2E6FC;
   border-radius: 2rem;
-  text-align: center;
+  width: 60vw;
+  height: 6rem;
+  padding-left: 1.5rem;
+  margin-left: -2rem;
   align-content: center;
-  margin-left: -2.5rem;
+  text-align: center;
 }
-.details div {
-  margin: .5rem;
-  color: #0E3570;
-}
-.social a {
-  color: #0E3570;
+.mem_details h3, 
+.mem_details h4, 
+.mem_social {
   margin: .25rem;
 }
+.mem_details h3 {
+  font-size: .95rem;
+}
+.mem_details h4 {
+  font-size: .85rem;
+}
+.mem_social a {
+  color: #0E3570;
+  margin: 0 .25rem;
+}
+
+
 
 @media only screen and (max-height: 480px) and (orientation: landscape) {
   #home_portrait {
@@ -767,12 +746,14 @@ blue color: #163976;*/
     right: 0;
     width: 30%;
   }
-  
-  
-  .cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  gap: 15px;
+  .unit_mem_cards {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 5vw;
+  }
+  .mem_details {
+    width: 40vw;
   }
   #team_page_header {
     justify-content: space-between;
