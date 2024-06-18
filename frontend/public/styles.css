@@ -414,7 +414,47 @@ blue color: #163976;*/
 .chairman_details h3:nth-child(1) {
   font-weight: bold;
 }
-
+.faculty {
+  margin-bottom: 2rem;
+}
+.faculty_coords {
+  display: block;
+  box-sizing: border-box;
+  margin: 2rem 1rem;
+  align-items: center;
+}
+.faculty_coord {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1.5rem 0;/*
+  background-color: #0E3570;*/
+  align-items: center;
+}
+.faculty_coord img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+.faculty_details {
+  z-index: -2;
+  background-color: #2E528F;
+  align-content: center;
+  padding: 1.25rem;
+  border-radius: 2rem;
+  margin-left: -3rem;
+  padding-left: 3.5rem;
+  width: 11rem;
+}
+.faculty_details h3 {
+  margin: .5rem 0;
+  font-size: .85rem;
+  color: white;
+}
+.faculty_links a i {
+  margin: 0 2rem;
+  color: white;
+}
 
 
 
