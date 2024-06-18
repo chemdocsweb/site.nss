@@ -657,6 +657,28 @@ blue color: #163976;*/
 }
 
 
+#contact_page_header {
+  display: flex;
+  box-sizing: border-box;
+}
+.contact_title {
+  background-color: #A2E6FC;
+}
+.contact_title h3 {
+  color: #0E3570;
+}
+.contact_main {
+}
+.contact_main h3 {
+  color: #A29B76;
+}
+.contact_details {
+}
+
+
+
+
+
 
 @media only screen and (max-height: 480px) and (orientation: landscape) {
   #home_portrait {
