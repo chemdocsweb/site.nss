@@ -662,6 +662,7 @@ blue color: #163976;*/
   box-sizing: border-box;
   padding: .5rem;
   background-color: #0E3570;
+  height: 5rem;
 }
 .contact_title {
   height: 9rem;
@@ -681,6 +682,7 @@ blue color: #163976;*/
   background-color: #0E3570;
   box-sizing: border-box;
   padding: 0;
+  margin-top: -1rem;
 }
 .contact_main h3 {
   margin: .25rem 0;
@@ -690,6 +692,10 @@ blue color: #163976;*/
 .contact_main h4 {
   margin: .125rem;
   color: white;
+}
+.contact_details {
+  padding: 1rem;
+  margin: 0;
 }
 .contact_info {
   margin: 1rem 0;
@@ -708,7 +714,7 @@ blue color: #163976;*/
   display: block;
   text-align: right;
   right: 1rem;
-  top: 6.25rem;
+  top: 5.75rem;
 }
 .contact_followus a {
   color: white;
@@ -721,14 +727,30 @@ blue color: #163976;*/
 .contact_form {
   margin: 0;
   width: 100%;
-  height: 5rem;
+  height: 15rem;
   background-color: #A2E6FC;
 }
 #contact {
   margin: 1rem;
+  text-align: center;
 }
-
-
+#contact input {
+  margin: 1rem 0;
+  border: none;
+  height: 2rem;
+  width: 80vw;
+}
+#comments {
+  height: 4rem;
+}
+#contact input[type="submit"] {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background-color: #0E3570;
+  color: #A29B76;
+  border-radius: 2rem;
+}
 
 
 
