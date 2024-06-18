@@ -315,6 +315,7 @@ blue color: #163976;*/
   height: 5rem;
 }
 .back_button.cyan {
+  left: .5rem;
   font-size: 1.75rem;
   color: #A2E6FC;
   text-decoration: none;
@@ -399,6 +400,7 @@ blue color: #163976;*/
   border-radius: 1.5rem;
   margin-top: -15vw;
   height: 9rem;
+  width: 80vw;
   margin-bottom: 3rem;
 }
 .chairman_links {
@@ -410,7 +412,6 @@ blue color: #163976;*/
 .chairman_details h3, .chairman_links span {
   color: #0E3570;
   font-size: 1rem;
-  width: 80vw;
 }
 .chairman_details h3:nth-child(1) {
   font-weight: bold;
@@ -524,7 +525,7 @@ blue color: #163976;*/
 .unit_lead_details {
   background-color: #A2E6FC;
   border-radius: 1.5rem;
-  padding: .5rem;
+  padding: 0.5rem;
   padding-top: 5rem;
   margin-top: -4.5rem;
 }
@@ -703,11 +704,8 @@ blue color: #163976;*/
   }
   .back_button, .back_button.cyan {
     font-size: 3rem;
-    width: 4rem;
+    width: 3rem;
   }
-  
-  
-  
   /* events.html styles */
   .events_header {
     height: 6rem;
@@ -746,6 +744,62 @@ blue color: #163976;*/
     right: 0;
     width: 30%;
   }
+  #team_page_header {
+    justify-content: space-between;
+    height: 6rem;
+    margin-bottom: 0;
+  }
+  .team_main {
+    margin: 1rem;
+  }
+  .chairman, .faculty {
+    margin: 1.5rem;
+  }
+  .chairman_details, .faculty_details {
+    margin-bottom: 0;
+  }
+  .team_title {
+    left: -10em;
+  }
+  .team_page_head p {
+    width: 40vw;
+  }
+  .chairman_img img {
+    width: 15vw;
+  }
+  .chairman_details {
+    margin-top: -5vw;
+    width: 30vw;
+  }
+  .chairman_details h3 {
+    text-align: center;
+  }
+  .faculty_coords {
+    margin: 0 10vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 5vw;
+  }
+  .unit_lead_mem {
+    width: 75vw;
+  }
+  .unit_lead_cards {
+    margin: 5vw 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 5vw;
+  }
+  .unit_lead_card {
+    justify-content: center;
+    text-align: center;
+  }
+  .unit_lead_details {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .unit_core_mem {
+    width: 25vw;
+  }
   .unit_mem_cards {
     margin: 0 10vw;
     display: grid;
@@ -754,12 +808,5 @@ blue color: #163976;*/
   }
   .mem_details {
     width: 40vw;
-  }
-  #team_page_header {
-    justify-content: space-between;
-    height: 5rem;
-  }
-  .team_title {
-    left: -6rem;
   }
 }
