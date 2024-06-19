@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+
+  <title>Events</title>
+</head>
+
+<body>
+  <header class="events_header">
+    <div class="back_button_div">
+      <a class="back_button cyan" href="javascript:back()"><i class="fa fa-arrow-left"></i></a>
+    </div>
+    <div class="events_head">
+      NSS-GVPCE(A)
+    </div>
+    <div class="events_title">
+      <h2>EVENTS</h2>
+    </div>
+  </header>
+  <main class="events_main">
+    <section class="events_list" id="event_cards">
+      {% for event in events %}
+      <div class="event_card">
+        <img src="{{ event['img_src'] }}">
+        <p>{{ event['event'] }}</p>
+        <a href="{{ event['link'] }}"> Know</a>
+      </div>
+      {% endfor %}
+    </section>
+    
+    <section class="future_events" id="further_events">
+      <h3>Upcoming<br/>Events</h3>
+      {% for next_event in next_events %}
+      <h4>{{ next_event['event'] }}</h4>
+      <p>{{ next_event['description'] }}</p>
+      {% endfor %} 
+      <p>Wait for more updates..</p>
+    </section>
+  </main>
+</body>
+
+<script type="text/javascript" src="/static/main.js"></script>
+</html>
