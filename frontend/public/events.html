@@ -28,7 +28,7 @@
       {% for event in events %}
       <div class="event_card">
         <img src="{{ event['img_src'] }}">
-        <p>{{ event['event'] }}</p>
+        <p>{{ event['name'] }}</p>
         <a href="{{ event['link'] }}"> Know</a>
       </div>
       {% endfor %}
@@ -37,7 +37,7 @@
     <section class="future_events" id="further_events">
       <h3>Upcoming<br/>Events</h3>
       {% for next_event in next_events %}
-      <h4>{{ next_event['event'] }}</h4>
+      <h4>{{ next_event['name'] }}</h4>
       <p>{{ next_event['description'] }}</p>
       {% endfor %} 
       <p>Wait for more updates..</p>

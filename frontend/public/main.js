@@ -75,6 +75,9 @@ var screenAspect_ratio = screenHeight/screenWidth
 if (window.location.href.includes("index.html")) {
   showSlide(slideNo);
   
+} else if (window.location.href.includes("gallery.html")) {
+  
+  
 } else if (window.location.href.includes('unit_1_leads.html') || window.location.href.includes('unit_2_leads.html')) {
   
   // unit background adjustment

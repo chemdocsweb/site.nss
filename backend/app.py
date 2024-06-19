@@ -18,6 +18,10 @@ def index():
 def show_events():
 	return render_template("events.html", events=events, next_events=next_events)
 
+@app.route('/gallery.html')
+def show_events():
+  return render_template("gallery.html", events=events)
+
 @app.route('/static/<path:filename>')
 def static_files(filename):
     return send_from_directory(file_path, filename)

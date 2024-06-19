@@ -25,34 +25,14 @@
   </header>
   <main class="gallery_main">
     <div class="gallery_imgs">
+      {% for event in events %}
       <div class="gallery_img">
-        <img src="/static/images/any_photo1.jpg">
+        <img src="{{ event['gallery_img_src'] }}">
         <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
+          <h4>{{ f'Event Name: ' ~ event['name'] }}</h4>
+          <h4>{{ f'Event Date: ' ~ event['date'] }}</h4>
         </div>
-      </div>
-      <div class="gallery_img">
-        <img src="/static/images/any_photo2.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
-      <div class="gallery_img">
-        <img src="/static/images/any_photo3.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
-      <div class="gallery_img">
-        <img src="/static/images/any_photo4.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <div class="next_page">
       <a><i class="fa fa-angle-double-right" aria-hidden="true"></i></a> 
