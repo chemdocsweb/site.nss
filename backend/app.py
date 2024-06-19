@@ -19,7 +19,7 @@ def show_events():
 	return render_template("events.html", events=events, next_events=next_events)
 
 @app.route('/gallery.html')
-def show_events():
+def show_gallery():
   return render_template("gallery.html", events=events)
 
 @app.route('/static/<path:filename>')
