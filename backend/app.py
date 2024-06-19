@@ -1,4 +1,4 @@
-import os
+            import os
 from flask import Flask, render_template, send_from_directory
 from UpdateEventsFile import EventsDataSeperation
 
@@ -12,10 +12,12 @@ def index():
 	return send_from_directory('../frontend/public', 'index.html')
 	
 @app.route('/styles.css')
-send_from_directory(template_path, '/styles.css')
+def style():
+  return send_from_directory(template_path, '/styles.css')
 
 @app.route('/main.js')
-send_from_directory(template_path, '/main.js')
+def javascript():
+  return send_from_directory(template_path, '/main.js')
 
 @app.route('/events.html')
 def show_events():
