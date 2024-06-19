@@ -898,6 +898,9 @@ blue color: #163976;*/
   .gallery_img img {
     width: 35vw;
   }
+  .img_details {
+    font-size: 1rem;
+  }
   .next_page {
     position: relative;
   }
