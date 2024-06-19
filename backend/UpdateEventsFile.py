@@ -9,12 +9,12 @@ def EventsDataSeperation(url):
 
     # Using StringIO to read the CSV content directly into memory
   csv_data = StringIO(response.text)
-  events = pd.read_csv(csv_data)
+  events_data = pd.read_csv(csv_data)
 
     # Processing the data
-  events['date'] = pd.to_datetime(events['date'], dayfirst=True).dt.strftime('%d-%m-%Y')
-  next_events = events[events['event_status'] == 0]
-  events = events[events['event_status'] == 1]
+  events_data['date'] = pd.to_datetime(events_data['date'], dayfirst=True).dt.strftime('%d-%m-%Y')
+  next_events = events_data[events_data['event_status'] == 0]
+  events = events_data[events_data['event_status'] == 1]
   events = events[::-1]
   events = events.to_dict("records")
   next_events = next_events.to_dict("records")
