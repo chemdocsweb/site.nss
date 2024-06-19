@@ -17,7 +17,7 @@
 <body style="min-height: 100vh; height: 100%; background: linear-gradient(to bottom, #A8E9FD, #fff); margin: 0;">
   <main class="aboutus_main">
     <div class="back_button_div">
-      <a class="back_button cyan" href="javascript:back()"><i class="fa fa-arrow-left"></i></a>
+      <a class="back_button cyan" style="color: #163976;" href="javascript:back()"><i class="fa fa-arrow-left"></i></a>
     </div>
     <section class="aboutus_text">
       <div class="aboutus_head">
@@ -54,15 +54,4 @@
 
 </body>
 <script type="text/javascript" src="/static/main.js"></script>
-<script>
-  var screenWidth = window.innerWidth;
-  if (screenWidth < 480px) {
-    var aboutus_symbl_divs = document.getElementsByClassName("aboutus_symbl");
-    var width_div = aboutus_symbl_divs[0].offsetWidth;
-    var l_r_margin = (screenWidth - width_div)/2;
-    for (var i = 0; i < aboutus_symbl_divs.length; i++) {
-    aboutus_symbl_divs[i].style.margin = `2rem ${l_r_margin}px`;
-    }
-  }
-</script>
 </html>
