@@ -8,15 +8,61 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" href="/static/images/logos/NSS_logo.png" type="image/x-icon">
   <link rel="stylesheet" href="/static/styles.css">
-  <title>NSS-GVPCE_A</title>
-  <style>
-    
-  </style>
+  <title>About Us</title>
+  
   <script src="https://kit.fontawesome.com/dab6f4f0cc.js" crossorigin="anonymous"></script>
+  
 </head>
 
-<body>
+<body style="min-height: 100vh; height: 100%; background: linear-gradient(to bottom, #A8E9FD, #fff); margin: 0;">
+  <main class="aboutus_main">
+    <div class="back_button_div">
+      <a class="back_button cyan" href="javascript:back()"><i class="fa fa-arrow-left"></i></a>
+    </div>
+    <section class="aboutus_text">
+      <div class="aboutus_head">
+        <h3>Welcome to</h3>
+        <h5>NSS GVPCE-(A)</h5>
+      </div>
+      <div class="aboutus_para">
+        <p>
+          The National Service Scheme (NSS) is a Central Sector Scheme of Government of India, Ministry of Youth Affairs & Sports. It provides opportunity to the student youth of 11th & 12th Class of schools at +2 Board level and student youth of Technical Institution, Graduate & Post Graduate at colleges and University level of India to take part in various government led community service activities & programmes. The sole aim of the NSS is to provide hands on experience to young students in delivering community service.
+        </p>
+      </div>
+    </section>
+    <section class="aboutus_symbls">
+      <div class="aboutus_symbl">
+        
+        <h3>
+          Help and work for the benefit of people in and around GVPCE.
+        </h3>
+      </div>
+      <div class="aboutus_symbl">
+        
+        <h3>
+          Uphold the need of selfless service.
+        </h3>
+      </div>
+      <div class="aboutus_symbl">
+        
+        <h3>
+          Motivate students at GVPCE to indulge to nation building activities
+        </h3>
+      </div>
+    </section>
+  </main>
 
 </body>
 <script type="text/javascript" src="/static/main.js"></script>
+<script>
+  var screenWidth = window.innerWidth;
+  if (screenWidth < 480px) {
+    var aboutus_symbl_divs = document.getElementsByClassName("aboutus_symbl");
+    var width_div = aboutus_symbl_divs[0].offsetWidth;
+    var l_r_margin = (screenWidth - width_div)/2;
+    for (var i = 0; i < aboutus_symbl_divs.length; i++) {
+    aboutus_symbl_divs[i].style.margin = `2rem ${l_r_margin}px`;
+    }
+  }
+</script>
 </html>

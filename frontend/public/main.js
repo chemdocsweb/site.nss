@@ -75,8 +75,15 @@ var screenAspect_ratio = screenHeight/screenWidth
 if (window.location.href.includes("index.html")) {
   showSlide(slideNo);
   
-} else if (window.location.href.includes("gallery.html")) {
-  
+} else if (window.location.href.includes("about_us.html")) {
+  if (screenWidth < '480px') {
+    var aboutus_symbl_divs = document.getElementsByClassName("aboutus_symbl");
+    var width_div = aboutus_symbl_divs[0].offsetWidth;
+    var l_r_margin = (screenWidth - width_div)/2;
+    for (var i = 0; i < aboutus_symbl_divs.length; i++) {
+    aboutus_symbl_divs[i].style.margin = `2rem ${l_r_margin}px`;
+    }
+  }
   
 } else if (window.location.href.includes('unit_1_leads.html') || window.location.href.includes('unit_2_leads.html')) {
   
