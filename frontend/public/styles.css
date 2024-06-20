@@ -312,9 +312,13 @@ body {
   right: 1.5rem;
   bottom: 1rem;
 }
-.next_page a {
+.next_page .fa-angle-double-right {
   color: #0E3570;
   right: 3rem;
+}
+.next_page .fa-angle-double-left {
+  color: #0E3570;
+  left: 3rem;
 }
 
 
@@ -924,7 +928,6 @@ blue color: #163976;*/
   }
   
   .gallery_imgs {
-    border: 2px solid black;
     box-sizing: border-box;
     padding: 2.5vw 5vw;
     display: grid;
@@ -936,7 +939,6 @@ blue color: #163976;*/
   }
   .gallery_img img {
     width: 25rem;
-    border: 2px solid red;
   }
   .img_details {
     margin-top: -3.5rem;

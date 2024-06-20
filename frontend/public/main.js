@@ -68,12 +68,42 @@ function showSlide(slideIndex) {
 }
 
 
+function plus_page(n) {
+  if (current_page + n <= no_of_pages) {
+    current_page += n;
+  }
+  images_gallery(current_page);
+}
+function minus_page(n) {
+  if (current_page - n >= 1) {
+    current_page -= n;
+  }
+  images_gallery(current_page);
+}
+function images_gallery(page) {
+  var start = (page - 1) * img_per_page;
+  var end = start + img_per_page;
+  gallery_cards.forEach((card, index) => {
+    card.style.display = (index >= start && index < end) ? 'block' : 'none';
+  });
+}
+
+
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 var screenAspect_ratio = screenHeight/screenWidth
 
 if (window.location.href.includes("index.html")) {
   showSlide(slideNo);
+  
+} else if (window.location.href.includes("gallery.html")) {
+  var gallery_cards = Array.from(document.getElementsByClassName("gallery_img"));
+  var gallery_card_count = gallery_cards.length;
+  var img_per_page = 4;
+  var no_of_pages = Math.ceil(gallery_card_count/img_per_page);
+  var current_page = 1;
+  images_gallery(current_page);
+  
   
 } else if (window.location.href.includes("about_us.html")) {
   if (screenWidth < '480px') {
