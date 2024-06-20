@@ -232,9 +232,6 @@ body {
   font-size: .85rem;
 }
 
-
-
-
 #gallery_page_header {
   display: flex;
   position: relative;
@@ -251,8 +248,7 @@ body {
   width: 11rem;
   height: 7.5rem;
   align-items: center;
-  top: -3.5rem;/*
-  right: -3rem;*/
+  top: -3.5rem;
 }
 .gallery_title h1 {
   position: relative;
@@ -266,8 +262,7 @@ body {
   width: 100%;
   display: block;
   text-align: right;
-  align-content: flex-end;/*
-  border: 2px solid white;*/
+  align-content: flex-end;
 }
 .gallery_nss_title h3 {
   font-size: 1rem;
@@ -275,20 +270,20 @@ body {
   color: white;
 }
 .gallery_main {
-  position: absolute;
   width: 100%;
   background-color: #A2E6FC;
+  padding-bottom: 5rem; /* Ensure space for pagination links */
 }
 .gallery_imgs {
-  display: block;
   text-align: center;
 }
 .gallery_img {
-  display: block;
+  display: none;
   margin: 2rem 0;
 }
 .gallery_img img {
-  width: 20rem;
+  width: 80%;
+  max-width: 20rem;
   border-radius: 2rem;
 }
 .img_details {
@@ -303,14 +298,23 @@ body {
   margin-left: 2rem;
 }
 .next_page {
-  z-index: 30;
-  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #A2E6FC;
+  padding: 1rem;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+.next_page a {
   font-size: 2rem;
-  text-align: right;
-  padding: 0;
-  right: 1.5rem;
-  bottom: 1rem;
+  color: #0E3570;
+}
+.next_page a:disabled {
+  color: #ccc;
+  pointer-events: none;
 }
 .next_page .fa-angle-double-right {
   color: #0E3570;
@@ -928,12 +932,12 @@ blue color: #163976;*/
   }
   
   .gallery_imgs {
-    box-sizing: border-box;
-    padding: 2.5vw 5vw;
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     gap: .5rem;
-  }
+    padding: 2.5vw 5vw;
+    box-sizing: border-box;
+    }
   .gallery_img {
     margin: 1rem 0;
   }
