@@ -3,7 +3,6 @@ from flask import Flask, render_template, send_from_directory
 from DataFetchFile import EventsDataSeperation, LeadsDataSeperation 
 
 event_link = "https://docs.google.com/spreadsheets/d/1WHSAjBb_Kw7mmowat-Dwx4u67r8w3fZkvvBq89Hl9iI/export?format=csv"
-events, next_events = EventsDataSeperation(event_link)
 
 lead_link = "https://docs.google.com/spreadsheets/d/1wxfDtvZKiAsTvdI_Hfum37YvTBl8AA8d9fKmGviWVRk/export?format=csv"
 
@@ -24,11 +23,13 @@ def index():
 
 @app.route('/events.html')
 def show_events():
+	events, next_events = EventsDataSeperation(event_link)
 	return render_template("events.html", events=events, next_events=next_events)
 
 @app.route('/gallery.html')
 def show_gallery():
-  return render_template("gallery.html", events=events)
+	events, _ = EventsDataSeperation(event_link)
+	return render_template("gallery.html", events=events)
   
 @app.route('/unit_1_leads.html')
 def unit_1():

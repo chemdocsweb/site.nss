@@ -9,7 +9,7 @@
   <link rel="icon" href="/static/images/logos/NSS_logo.png" type="image/x-icon">
   <link rel="stylesheet" href="/static/styles.css">
   <style>
-    body{
+    * {
       margin: 0;
     }
   </style>
@@ -31,7 +31,7 @@
   </header>
   <main class="gallery_main">
     <div class="gallery_imgs">
-      <!---{% for event in events %}
+      {% for event in events %}
       <div class="gallery_img">
         <img src="{{ event['gallery_img_src'] }}">
         <div class="img_details">
@@ -39,53 +39,11 @@
           <h4>{{ 'Event Date: ' ~ event['date'] }}</h4>
         </div>
       </div>
-      {% endfor %}--->
-      <div class="gallery_img">
-        <img src="images/any_photo1.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
-      <div class="gallery_img">
-        <img src="images/any_photo1.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
-      <div class="gallery_img">
-        <img src="images/any_photo1.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
-      <div class="gallery_img">
-        <img src="images/any_photo1.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
-      <div class="gallery_img">
-        <img src="images/any_photo1.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
-      <div class="gallery_img">
-        <img src="images/any_photo1.jpg">
-        <div class="img_details">
-          <h4>Event Name:</h4>
-          <h4>Event Date:</h4>
-        </div>
-      </div>
+      {% endfor %}
     </div>
-    <div class="next_page">
-      <a href="javascript:minus_page(1)" id="gallery_left"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-      <a href="javascript:plus_page(1)" id="gallery_right"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+    <div class="gallery_pagation">
+      <div class="left"><a href="javascript:" id="left_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></div>
+      <div class="right"><a href="javascript:" id="right_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
     </div>
   </main>
 </body>

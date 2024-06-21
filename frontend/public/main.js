@@ -67,39 +67,6 @@ function showSlide(slideIndex) {
   slides[ind].classList.add("active");
 }
 
-function plus_page(n) {
-  if (current_page + n <= no_of_pages) {
-    current_page += n;
-    console.log("current", current_page);
-  }
-  images_gallery(current_page);
-}
-function minus_page(n) {
-  if (current_page - n >= 1) {
-    current_page -= n;
-  }
-  images_gallery(current_page);
-}
-function images_gallery(page) {
-  var start = (page - 1) * img_per_page;
-  var end = start + img_per_page;
-    gallery_cards.forEach((card, index) => {
-      card.style.display = (index >= start && index < end) ? 'block' : 'none';
-    });
-  var left_btn = document.getElementById("gallery_left");
-  var right_btn = document.getElementById("gallery_right");
-  if (page === no_of_pages) {
-    right_btn.style.display = 'none';
-  } else {
-    right_btn.style.display = 'block';
-  }
-  if (page === 1) {
-    left_btn.style.display = 'none';
-  } else {
-  left_btn.style.display = 'block';
-  }
-}
-
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 var screenAspect_ratio = screenHeight/screenWidth
@@ -108,15 +75,6 @@ if (window.location.href.includes("index.html")) {
   showSlide(slideNo);
   
 } else if (window.location.href.includes("gallery.html")) {
-  var gallery_cards = Array.from(document.getElementsByClassName("gallery_img"));
-  var gallery_card_count = gallery_cards.length;
-  var img_per_page = 4;
-  var no_of_pages = Math.ceil(gallery_card_count/img_per_page);
-  var current_page = 1;
-  images_gallery(current_page);
-  console.log("current", current_page);
-  console.log("total_pages", no_of_pages);
-  
   
 } else if (window.location.href.includes("about_us.html")) {
   if (screenWidth < '480px') {

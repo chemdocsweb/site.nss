@@ -27,15 +27,27 @@
   <main class="events_main">
     <section class="events_list" id="event_cards">
       {% for event in events %}
-      <div class="event_card">
-        <img src="{{ event['img_src'] }}">
+      <div class="event_card" id="{{ event['name'] }}">
+        {% if event.media == 'vid' %}
+        <video controls autoplay muted>
+          <source src="{{ event['media_src'] }}" type="video/mp4">
+          your browser does not support video tag
+        </video>
+        {% else %}
+        <img src="{{ event['media_src'] }}">
+        {% endif %}
         <p>{{ event['name'] }}</p>
-        <a href="{{ event['link'] }}"> Know</a>
+        <a href="javascript:description(this)"> Know</a>
       </div>
       {% endfor %}
     </section>
     
     <section class="future_events" id="further_events">
+      <div class="event_description">
+        {% for event in events %}
+        <p id="{{ 'p' ~ event['name'] }}">{{ event['description'] }}</p>
+        {% endfor %}
+      </div>
       <h3>Upcoming<br/>Events</h3>
       {% for next_event in next_events %}
       <h4>{{ next_event['name'] }}</h4>
