@@ -12,6 +12,7 @@ def EventsDataSeperation(url):
   events_data['date'] = pd.to_datetime(events_data['date'], dayfirst=True).dt.strftime('%d-%m-%Y')
   next_events = events_data[events_data['event_status'] == 0]
   events = events_data[events_data['event_status'] == 1]
+  events = events.head(9)
   events = events[::-1]
   events = events.to_dict("records")
   next_events = next_events.to_dict("records")
