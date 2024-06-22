@@ -29,7 +29,7 @@
       {% for event in events %}
       <div class="event_card" id="{{ event['name'] }}">
         {% if event.media == 'vid' %}
-        <video controls autoplay muted>
+        <video autoplay muted>
           <source src="{{ event['media_src'] }}" type="video/mp4">
           your browser does not support video tag
         </video>
@@ -37,26 +37,45 @@
         <img src="{{ event['media_src'] }}">
         {% endif %}
         <p>{{ event['name'] }}</p>
-        <a href="javascript:description(this)"> Know</a>
+        <a href="javascript:description(this)">Know More</a>
       </div>
       {% endfor %}
     </section>
     
     <section class="future_events" id="further_events">
-      <div class="event_description">
+      <div class="event_descriptions">
         {% for event in events %}
-        <p id="{{ 'p' ~ event['name'] }}">{{ event['description'] }}</p>
+        <div class="event_description" id="{{ 'div' ~ event['name'] }}">
+          <h5>{{ event['name'] }}</h5>
+          <p>{{ event['description'] }}</p>
+        </div>
         {% endfor %}
       </div>
-      <h3>Upcoming<br/>Events</h3>
-      {% for next_event in next_events %}
-      <h4>{{ next_event['name'] }}</h4>
-      <p>{{ next_event['description'] }}</p>
-      {% endfor %} 
-      <p>Wait for more updates..</p>
+      <div id="upcoming_events">
+        <h3>Upcoming<br/>Events</h3>
+        {% for next_event in next_events %}
+        <h4>{{ next_event['name'] }}</h4>
+        <p>{{ next_event['description'] }}</p>
+        {% endfor %} 
+        <p>Wait for more updates..</p>
+      </div>
     </section>
   </main>
 </body>
 
 <script type="text/javascript" src="/static/main.js"></script>
+<script>
+  function description(element) {
+    var par_element = element.parentElement;
+    var parent_id = par_element.id;
+    var description_id = 'div' + parent_id;
+    var clicked_description = document.getElementbyId(description_id);
+    var upcoming_events = document.getElemenstById('upcoming_events')
+    var descriptions = document.querySelectorAll('.event_description');
+      descriptions.forEach(description => { description.style.display = 'none'; });
+    clicked_description.style.display = 'block';
+    upcoming_events.style.display = 'none';
+  }
+  
+</script>
 </html>

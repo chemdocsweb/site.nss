@@ -420,11 +420,8 @@ body {
   text-decoration: none;
   margin-bottom: 3vw;
 }
-.event_description p {
+.event_description {
   display: none;
-}
-.event_description p.active {
-  display: block;
 }
 .future_events {
   position: fixed;
@@ -981,7 +978,7 @@ body {
     margin: 1rem .5rem;
     border-radius: 1.5vw;
   }
-  .event_card img {
+  .event_card img, .event_card video {
     width: 18vw;
     margin: .75vw .5vw;
     border-radius: 1vw;
