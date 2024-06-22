@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" href="/static/images/logos/NSS_logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="styles.css">
 
   <title>Events</title>
 </head>
 
 <body>
-  <header class="events_header">
+  <header class="events_header" id="go">
     <div class="back_button_div">
       <a class="back_button cyan" href="javascript:back()"><i class="fa fa-arrow-left"></i></a>
     </div>
@@ -37,26 +37,26 @@
         <img src="{{ event['media_src'] }}">
         {% endif %}
         <p>{{ event['name'] }}</p>
-        <a href="javascript:description(this)">Know More</a>
+        <a href="javascript:void(0)" onclick="description(this)">Know More</a>
       </div>
       {% endfor %}
     </section>
     
-    <section class="future_events" id="further_events">
+    <section class="future_events" id="event_descrps">
       <div class="event_descriptions">
         {% for event in events %}
         <div class="event_description" id="{{ 'div' ~ event['name'] }}">
           <h5>{{ event['name'] }}</h5>
           <p>{{ event['description'] }}</p>
         </div>
-        {% endfor %}
+        {% endfor %}-->
       </div>
       <div id="upcoming_events">
         <h3>Upcoming<br/>Events</h3>
         {% for next_event in next_events %}
         <h4>{{ next_event['name'] }}</h4>
         <p>{{ next_event['description'] }}</p>
-        {% endfor %} 
+        {% endfor %}
         <p>Wait for more updates..</p>
       </div>
     </section>
@@ -64,18 +64,8 @@
 </body>
 
 <script type="text/javascript" src="/static/main.js"></script>
-<script>
-  function description(element) {
-    var par_element = element.parentElement;
-    var parent_id = par_element.id;
-    var description_id = 'div' + parent_id;
-    var clicked_description = document.getElementbyId(description_id);
-    var upcoming_events = document.getElemenstById('upcoming_events')
-    var descriptions = document.querySelectorAll('.event_description');
-      descriptions.forEach(description => { description.style.display = 'none'; });
-    clicked_description.style.display = 'block';
-    upcoming_events.style.display = 'none';
-  }
-  
-</script>
+<!---<script>
+var upcoming_events = document.getElementById('upcoming_events');
+upcoming_events.style.display = 'block';
+</script>--->
 </html>

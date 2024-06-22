@@ -436,6 +436,10 @@ body {
 .future_events h4, .future_events p {
   word-wrap: wrap;
 }
+#upcoming_events {
+  display: block;
+}
+
 
 /* team.html */
 
