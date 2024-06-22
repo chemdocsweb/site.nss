@@ -282,16 +282,29 @@ body {
 }
 .gallery_pagation div {
   width: 50%;
+  border: 2px solid #000;
+  text-align: center;
 }
-.gallery_pagation a {
+.gallery_pagation button {
+  display: block;
   color: #163976;
   font-size: 1.75rem;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
-.left {
-  text-align: left;
+
+#left_btn {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
 }
-.right {
-  text-align: right;
+
+#right_btn {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
 }
 
 /* about_us.html styles */
@@ -432,9 +445,16 @@ body {
 }
 .future_events h3 {
   color: #163976;
+  word-wrap: wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 .future_events h4, .future_events p {
   word-wrap: wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 #upcoming_events {
   display: block;
@@ -458,15 +478,15 @@ body {
   text-align: center;
   align-content: flex-end;
   border-radius: 50%;
-  width: 9rem;
-  height: 5rem;
+  width: 8rem;
+  height: 4.5rem;
   padding: 1.25rem;
   margin-top: -3.15rem;
   margin-left: 2.25rem;
   margin-bottom: 0;
 }
 .team_title h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   position: relative;
   margin-bottom: .25rem;
 }
@@ -576,10 +596,10 @@ body {
 .unit_title {
   background-color: #D12E2D;
   position: absolute;
-  margin-left: 5rem;
+  margin-left: 4rem;
   border-radius: 50%;
   width: 11rem;
-  height: 7rem;
+  height: 7.5rem;
   align-items: center;
   top: -3.5rem;/*
   right: -3rem;*/
@@ -589,7 +609,7 @@ body {
   font-size: 1.25rem;
   color: white;
   text-align: center;
-  top: 3rem;
+  top: 3.5rem;
 }
 .unit_nss_title {
   height: inherit;
@@ -625,7 +645,7 @@ body {
   margin-bottom: 1rem;
 }
 .unit_lead_card img {
-  width: 9rem;
+  width: 8.5rem;
   border-radius: 50%;
 }
 .unit_lead_details {
