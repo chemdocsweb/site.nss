@@ -144,6 +144,8 @@ if (window.location.href.includes("index.html")) {
   paginate(current_page);
 
 } else if (window.location.href.includes("events.html")) {
+  var upcoming_events = document.getElementById('upcoming_events');
+  upcoming_events.style.display = 'block';
   var prev_description_id = '';
   
 } else if (window.location.href.includes("about_us.html")) {
