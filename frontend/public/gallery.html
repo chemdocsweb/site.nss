@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" href="/static/images/logos/NSS_logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="styles.css">
   <style>
     * {
       margin: 0;
@@ -17,7 +17,7 @@
   <script src="https://kit.fontawesome.com/dab6f4f0cc.js" crossorigin="anonymous"></script>
 </head>
 
-<body><!---style="background-color: #A2E6FC">--->
+<body>
   <header id="gallery_page_header">
     <div class="back_button_div">
       <a class="back_button cyan" href="javascript:back()"><i class="fa fa-arrow-left"></i></a>
@@ -42,11 +42,11 @@
       {% endfor %}
     </div>
     <div class="gallery_pagation">
-      <div class="left"><a href="javascript:" id="left_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></div>
-      <div class="right"><a href="javascript:" id="right_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+      <div class="left"><a href="javascript:minus_page(1)" id="left_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></div>
+      <div class="right"><a href="javascript:plus_page(1)" id="right_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
     </div>
   </main>
 </body>
-<script type="text/javascript" src="/static/main.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
 </html>
