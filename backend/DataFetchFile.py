@@ -19,6 +19,25 @@ def EventsDataSeperation(url):
 
   return events, next_events
 
+def GalleryImagesFetch(url):
+  import requests as rq
+  import pandas as pd
+  from io import StringIO
+
+  response = rq.get(url)
+  response.raise_for_status()
+
+  csv_data = StringIO(response.text)
+  events_data = pd.read_csv(csv_data)
+
+  events_data['date'] = pd.to_datetime(events_data['date'], dayfirst=True).dt.strftime('%d-%m-%Y')
+  
+  events = events_data[events_data['event_status'] == 1]
+  events = events[::-1]
+  events = events.to_dict("records")
+
+  return events
+
 
 
 def LeadsDataSeperation(url):

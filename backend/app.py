@@ -2,8 +2,11 @@ import os
 import csv
 from datetime import datetime
 from flask import Flask, request, render_template, send_from_directory
-
-from DataFetchFile import EventsDataSeperation, LeadsDataSeperation 
+import schedule
+import time
+from threading import Thread
+import sync_to_github
+from DataFetchFile import *
 
 event_link = "https://docs.google.com/spreadsheets/d/1WHSAjBb_Kw7mmowat-Dwx4u67r8w3fZkvvBq89Hl9iI/export?format=csv"
 
@@ -29,7 +32,7 @@ def show_events():
 
 @app.route('/gallery.html')
 def show_gallery():
-    events, _ = EventsDataSeperation(event_link)
+    events = GalleryImagesFetch(event_link)
     return render_template("gallery.html", events=events)
 
 @app.route('/unit_1_leads.html')
@@ -55,6 +58,18 @@ def submit_contact():
             
         return 'Form submitted successfully!' 
     return 'Method Not Allowed', 405
+    
+    
+'''def run_scheduler():
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+        
+
+schedule.every().hour.do(sync_to_github)
+
+scheduler_thread = Thread(target=run_scheduler)
+scheduler_thread.start()'''
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))  # Use the PORT environment variable or default to 5000
