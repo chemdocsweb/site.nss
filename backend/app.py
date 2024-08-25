@@ -38,11 +38,11 @@ def show_gallery():
     return render_template("gallery.html", events=events)
 @app.route('/unit_1.html')
 def unit_1_():
-	return render_template('unit_1.html', core_mems = unit__1)
+	return render_template('unit_1.html', core_mems = unit_1_core)
 
 @app.route('/unit_2.html')
 def unit_2_():
-	return render_template('unit_2.html', core_mems = unit__2)
+	return render_template('unit_2.html', core_mems = unit_2_core)
 
 @app.route('/unit_1_leads.html')
 def unit_1():
