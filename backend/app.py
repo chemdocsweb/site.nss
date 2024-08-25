@@ -2,7 +2,7 @@ import os
 import csv
 from datetime import datetime
 from flask import Flask, request, render_template, send_from_directory
-import schedule
+# import schedule
 import time
 from threading import Thread
 import sync_to_github
@@ -13,6 +13,8 @@ event_link = "https://docs.google.com/spreadsheets/d/1WHSAjBb_Kw7mmowat-Dwx4u67r
 lead_link = "https://docs.google.com/spreadsheets/d/1wxfDtvZKiAsTvdI_Hfum37YvTBl8AA8d9fKmGviWVRk/export?format=csv"
 
 unit_1_core, unit_1_branch, unit_2_core, unit_2_branch = LeadsDataSeperation(lead_link)
+
+unit__1, unit__2 = LeadsDataSeperation(lead_link, unitFile = True)
 
 file_path = "../frontend/public"
 app = Flask(__name__, template_folder=file_path, static_url_path='/static', static_folder=file_path)
@@ -34,6 +36,13 @@ def show_events():
 def show_gallery():
     events = GalleryImagesFetch(event_link)
     return render_template("gallery.html", events=events)
+@app.route('/unit_1.html')
+def unit_1_():
+	return render_template('unit_1.html', core_mems = unit__1)
+
+@app.route('/unit_2.html')
+def unit_2_():
+	return render_template('unit_2.html', core_mems = unit__2)
 
 @app.route('/unit_1_leads.html')
 def unit_1():

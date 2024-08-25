@@ -40,7 +40,7 @@ def GalleryImagesFetch(url):
 
 
 
-def LeadsDataSeperation(url):
+def LeadsDataSeperation(url, unitFile=False):
   import requests as rq
   import pandas as pd
   from io import StringIO
@@ -54,12 +54,24 @@ def LeadsDataSeperation(url):
   unit_1 = mem_data[mem_data['unit'] == 1]
   unit_2 = mem_data[mem_data['unit'] == 2]
   
-  unit_1_core = unit_1[unit_1['c_or_b'] == 'core']
-  unit_2_core = unit_2[unit_2['c_or_b'] == 'core']
+  unit_1_core = unit_1[unit_1['c_or_b'] == 'core'].reset_index(drop=True)
+  unit_2_core = unit_2[unit_2['c_or_b'] == 'core'].reset_index(drop=True)
   
-  unit_1_branch = unit_1[unit_1['c_or_b'] != 'core']
-  unit_2_branch = unit_2[unit_2['c_or_b'] != 'core']
+  unit_1_branch = unit_1[unit_1['c_or_b'] != 'core'].reset_index(drop=True)
+  unit_2_branch = unit_2[unit_2['c_or_b'] != 'core'].reset_index(drop=True)
   
+  if not unitFile == False:
+  	unit_1 = unit_1_core.drop([0, 2])
+  	unit_2 = unit_2_core.drop([0, 2])
+  	
+  	unit_1 = unit_1.head(7)
+  	unit_2 = unit_2.head(8)
+  	
+  	unit_1 = unit_1.to_dict("records")
+  	unit_2 = unit_2.to_dict("records")
+  	
+  	return unit_1, unit_2
+  	
   unit_1_core = unit_1_core.to_dict("records")
   unit_1_branch = unit_1_branch.to_dict("records")
   unit_2_core = unit_2_core.to_dict("records")

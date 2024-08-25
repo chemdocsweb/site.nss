@@ -28,9 +28,9 @@
     <section class="unit_lead_mem">
       <div class="unit_lead_cards">
         <div class="unit_lead_card">
-          <img src="/static/images/other/event_img.jpg">
+          <img src="/static/images/board_mems/unit_2/president.jpg">
           <div class="unit_lead_details">
-            <h3>Sheshu</h3>
+            <h3>B. Sai Sandeep Kumar</h3>
             <h4>Student President</h4>
             <h5>Unit-2</h5>
             <div class="unit_lead_links">
@@ -42,9 +42,9 @@
           </div>
         </div>
         <div class="unit_lead_card">
-          <img src="/static/images/other/event_img.jpg">
+          <img src="/static/images/board_mems/unit_2/secretary.jpg">
           <div class="unit_lead_details">
-            <h3>avarthika</h3>
+            <h3>P. Satya Moulika</h3>
             <h4>Student Secretary</h4>
             <h5>Unit-2</h5>
             <div class="unit_lead_links">
@@ -62,14 +62,10 @@
     </section>
     <section class="unit_core_mem">
       <h3>2023-24 Core Members</h3>
-      <h4>K. Sumanth</h4>
-      <h5>- Student President</h5>
-      <h4>B. L. S. S. Pravarthika</h4>
-      <h5>- Student Secretary</h5>
-      <h4>Mohammad Ejaz</h4>
-      <h5>- Vice President</h5>
-      <h4>G. Satvika</h4>
-      <h5>- Student Treasurer</h5>
+      {% for mem in core_mems %}
+      <h4>{{ mem['name'] }}</h4>
+      <h5>{{ '-' ~ mem['role'] }}</h5>
+      {% endfor %}
     </section>
   </main>
 
